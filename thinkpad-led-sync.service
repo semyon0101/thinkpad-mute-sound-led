@@ -4,7 +4,7 @@ Description=Sync ThinkPad audio LEDs with PipeWire
 After=pipewire.service wireplumber.service
 
 [Service]
-ExecStart=/work/thinkpad-mute-sound-led/thinkpad-led-sync.sh
+ExecStart=%h/.local/bin/thinkpad-led-sync.sh
 Restart=always
 RestartSec=2
 
