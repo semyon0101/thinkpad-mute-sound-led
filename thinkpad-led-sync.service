@@ -1,0 +1,12 @@
+# copiped from https://github.com/putofixe67/thinkpad-led-sync/blob/main/thinkpad-led-sync.service
+[Unit]
+Description=Sync ThinkPad audio LEDs with PipeWire
+After=pipewire.service wireplumber.service
+
+[Service]
+ExecStart=/work/thinkpad-mute-sound-led/thinkpad-led-sync.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target
